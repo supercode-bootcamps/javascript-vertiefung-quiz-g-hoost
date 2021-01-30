@@ -1,0 +1,48 @@
+
+button {
+    display: inline-flex;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+div {
+    position: relative;
+    background-color: lightyellow;
+    height: 500px;
+    width: 500px;
+    border: 2px dotted darkgray;
+}
+h1 {
+    font-size: 1em;
+    margin-top: 3rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 2rem;
+}
+.bild {
+    display: flex;
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 3rem;
+    border-radius: 10px;
+}
+p {
+    width: 150px;
+    height: 30px;
+    color: white;
+}
