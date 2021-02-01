@@ -122,8 +122,6 @@ let completeData = {
     }
 };
 
-
-
 let currentIndex = 0;
 let numberOfQuestions = data.length;
 completeData.createQuiz(data[currentIndex]);
@@ -132,17 +130,6 @@ completeData.createQuiz(data[currentIndex]);
 let correctButton = document.querySelector('.correctButton')
 let wrongButton = document.querySelectorAll('.wrongButton');
 
-// correctButton.onclick = function ()
-// {
-//     for (let i = 1; i <= data.length; i++) {
-
-//         if (correctButton[i]) {
-//             let newQuestion;
-//             newQuestion = completeData.createQuiz(data[i++]);
-//         }
-
-//     }
-// }
 let setEventListener = (e) =>
 {
     e.preventDefault();
@@ -175,34 +162,3 @@ let setWrongButton = (wrongButton) =>
     });
 }
 setWrongButton(wrongButton);
-
-
-
-
-    // completeData(+1);
-    // data.createQuiz(data[+1]);
-    // data.clearQuiz(data[+1]);
-    // ('h2').style.visibility = 'hidden';
-    // newQuestion(+1);
-
-
-// function correctAnswer()
-// {
-//     let correct = document.getElementsByClassName('correctButton');
-//     correct.addEventListener(click, (e) =>
-//     {
-
-//         correct.style.backgroundColor = "green";
-//     });
-// }
-// correctAnswer();
-
-// function wrongAnswer()
-// {
-//     let wrong = document.getElementsByClassName('wrongButton');
-//     wrong.addEventListener(click, (e) =>
-//     {
-//         wrong.style.backgroundColor = "red";
-//     });
-// }
-// wrongAnswer();
