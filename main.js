@@ -123,21 +123,21 @@ completeData.createQuiz(data[7]);
 
 
 
-
-function correctAnswer(e)
+function correctAnswer()
 {
-    let correct = document.getElementByClassName('correctButton');
-    correct.addEventListener(click, e =>
+    let correct = document.getElementsByClassName('correctButton');
+    correct.addEventListener(click, (e) =>
     {
+
         correct.style.backgroundColor = "green";
     });
 }
 correctAnswer();
 
-function wrongAnswer(e)
+function wrongAnswer()
 {
-    let wrong = document.getElementByClassName('wrongButton');
-    correct.addEventListener(click, e =>
+    let wrong = document.getElementsByClassName('wrongButton');
+    wrong.addEventListener(click, (e) =>
     {
         wrong.style.backgroundColor = "red";
     });
