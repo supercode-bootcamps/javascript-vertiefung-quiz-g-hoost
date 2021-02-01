@@ -115,31 +115,94 @@ let completeData = {
         this.createQuestion(apply.question);
         this.createAnswer(apply.answer);
         this.createButton(apply.choice);
+    },
+    clearQuiz: function ()
+    {
+        content.innerHTML = "";
     }
 };
 
 
-completeData.createQuiz(data[7]);
+
+let currentIndex = 0;
+let numberOfQuestions = data.length;
+completeData.createQuiz(data[currentIndex]);
 
 
+let correctButton = document.querySelector('.correctButton')
+let wrongButton = document.querySelectorAll('.wrongButton');
 
-function correctAnswer()
+// correctButton.onclick = function ()
+// {
+//     for (let i = 1; i <= data.length; i++) {
+
+//         if (correctButton[i]) {
+//             let newQuestion;
+//             newQuestion = completeData.createQuiz(data[i++]);
+//         }
+
+//     }
+// }
+let setEventListener = (e) =>
 {
-    let correct = document.getElementsByClassName('correctButton');
-    correct.addEventListener(click, (e) =>
+    e.preventDefault();
+    correctButton.style.background = 'green';
+    correctButton.innerHTML = 'richtig';
+    setTimeout(() =>
     {
+        completeData.clearQuiz();
+        correctButton = document.querySelector('.correctButton');
+        currentIndex++;
+        completeData.createQuiz(data[currentIndex]);
+        correctButton = document.querySelector('.correctButton')
+        wrongButton = document.querySelectorAll('.wrongButton');
+        correctButton.addEventListener('click', setEventListener);
+        setWrongButton(wrongButton);
+    }, 300)
 
-        correct.style.backgroundColor = "green";
+};
+
+correctButton.addEventListener('click', setEventListener);
+let setWrongButton = (wrongButton) =>
+{
+    wrongButton.forEach((button) =>
+    {
+        button.addEventListener('click', (e) =>
+        {
+            button.style.background = 'red';
+            button.innerHTML = 'falsch';
+        });
     });
 }
-correctAnswer();
+setWrongButton(wrongButton);
 
-function wrongAnswer()
-{
-    let wrong = document.getElementsByClassName('wrongButton');
-    wrong.addEventListener(click, (e) =>
-    {
-        wrong.style.backgroundColor = "red";
-    });
-}
-wrongAnswer();
+
+
+
+    // completeData(+1);
+    // data.createQuiz(data[+1]);
+    // data.clearQuiz(data[+1]);
+    // ('h2').style.visibility = 'hidden';
+    // newQuestion(+1);
+
+
+// function correctAnswer()
+// {
+//     let correct = document.getElementsByClassName('correctButton');
+//     correct.addEventListener(click, (e) =>
+//     {
+
+//         correct.style.backgroundColor = "green";
+//     });
+// }
+// correctAnswer();
+
+// function wrongAnswer()
+// {
+//     let wrong = document.getElementsByClassName('wrongButton');
+//     wrong.addEventListener(click, (e) =>
+//     {
+//         wrong.style.backgroundColor = "red";
+//     });
+// }
+// wrongAnswer();
