@@ -63,7 +63,6 @@ let data = [
 
 let content = document.getElementById("content");
 
-
 let completeData = {
     createImage: function (url)
     {
@@ -80,8 +79,6 @@ let completeData = {
         question.classList.add("frage");
         content.appendChild(question);
     },
-    // createButton: function (answerButton)
-    // {
 
     createAnswer: function (answerText)
     {
@@ -103,10 +100,7 @@ let completeData = {
             } else {
                 choice.classList.add('wrongButton');
             };
-
         }
-
-
     },
 
     createQuiz: function (apply)
@@ -125,7 +119,6 @@ let completeData = {
 let currentIndex = 0;
 let numberOfQuestions = data.length;
 completeData.createQuiz(data[currentIndex]);
-
 
 let correctButton = document.querySelector('.correctButton')
 let wrongButton = document.querySelectorAll('.wrongButton');
@@ -148,7 +141,6 @@ let setEventListener = (e) =>
     }, 300)
 
 };
-
 correctButton.addEventListener('click', setEventListener);
 let setWrongButton = (wrongButton) =>
 {
