@@ -1,14 +1,33 @@
 
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+div {
+    position: relative;
+    height: 60vh;
+    width: 500px;
+    border: 2px dotted darkgray;
+    margin: 0 auto;
+    background-image: url(assets/17973871.jpg);
+    background-size: contain;
+    background-color: .5;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
 button {
-    display: inline-flex;
-    width: 100px;
-    height: 30px;
+    display: grid;
+    width: 150px;
+    height: 40px;
     background-color: white;
-    border-style: none;
+    border: 1px solid grey;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .green {
     background-color: green;
@@ -16,30 +35,21 @@ button {
 .red {
     background-color: red;
 }
-div {
-    position: relative;
-    background-color: lightyellow;
-    height: 500px;
-    width: 500px;
-    border: 2px dotted darkgray;
-}
+
 h1 {
     font-size: 1em;
     margin-top: 3rem;
     text-align: center;
 }
 h2 {
-    font-size: 1em;
-    text-align: center;
-    margin-top: 2rem;
+    visibility: hidden;
 }
 .bild {
     display: flex;
-    width: 250px;
+    width: 350px;
     height: auto;
     margin: 0 auto;
     padding-top: 3rem;
-    border-radius: 10px;
 }
 p {
     width: 150px;

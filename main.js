@@ -80,46 +80,55 @@ let completeData = {
         question.classList.add("frage");
         content.appendChild(question);
     },
-    createButton: function (answerButton)
-    {
-        for (let i = 0; i < answerButton.length; i++) {
-            let choice = document.createElement('button');
-            choice.innerHTML = answerButton[i];
-            choice.classList.add('knopf')
-            content.appendChild(choice);
-        }
-    },
+    // createButton: function (answerButton)
+    // {
+
     createAnswer: function (answerText)
     {
         let answer = document.createElement('h2');
         answer.innerHTML = answerText;
-        answer.classList.add("frage");
+        answer.classList.add('frage');
         content.appendChild(answer);
     },
+
+    createButton: function (answerButton)
+    {
+        for (let i = 0; i < answerButton.length; i++) {
+            let choice = document.createElement('button');
+            let solution = document.querySelector('h2');
+            choice.innerHTML = answerButton[i];
+            content.appendChild(choice);
+            if (choice.innerHTML == solution.innerHTML) {
+                choice.classList.add('correctButton');
+            } else {
+                choice.classList.add('wrongButton');
+            }
+        }
+    },
+
+
 
     createQuiz: function (apply)
     {
         this.createImage(apply.url);
         this.createQuestion(apply.question);
-        this.createButton(apply.choice);
         this.createAnswer(apply.answer);
+        this.createButton(apply.choice);
     }
 };
-
 completeData.createQuiz(data[7]);
 
-let button = document.querySelector('button');
-let correctAnswer = document.querySelector('h2');
 
-button.addEventListener("click", e =>
-{
-    if (button.innerHTML == correctAnswer.innerHTML) {
-        button.style.backgroundColor = "green";
-    } else {
-        button.style.backgroundColor = "red";
-    }
 
-});
+// button.addEventListener("click", e =>
+// {
+//     if (button.innerHTML == correctAnswer.innerHTML) {
+//         button.style.backgroundColor = "green";
+//     } else {
+//         button.style.backgroundColor = "red";
+//     }
+//3 gesonderte eventListener!!
+// });
 
 
 
