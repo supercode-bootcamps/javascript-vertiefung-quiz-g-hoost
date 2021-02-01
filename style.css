@@ -22,12 +22,13 @@ button {
     display: grid;
     width: 150px;
     height: 40px;
-    background-color: white;
+    background-color: honeydew;
     border: 1px solid grey;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 1rem;
+    border-radius: 5px;
 }
 .green {
     background-color: green;
@@ -37,9 +38,12 @@ button {
 }
 
 h1 {
-    font-size: 1em;
-    margin-top: 3rem;
+    font-size: 1.4em;
+    margin: 3rem 1em 0 1em;
     text-align: center;
+    background-color: honeydew;
+    border-radius: 5px;
+    padding: 5px;
 }
 h2 {
     visibility: hidden;

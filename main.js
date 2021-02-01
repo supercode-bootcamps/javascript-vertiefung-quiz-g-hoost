@@ -102,11 +102,12 @@ let completeData = {
                 choice.classList.add('correctButton');
             } else {
                 choice.classList.add('wrongButton');
-            }
+            };
+
         }
+
+
     },
-
-
 
     createQuiz: function (apply)
     {
@@ -116,20 +117,29 @@ let completeData = {
         this.createButton(apply.choice);
     }
 };
+
+
 completeData.createQuiz(data[7]);
 
 
 
-// button.addEventListener("click", e =>
-// {
-//     if (button.innerHTML == correctAnswer.innerHTML) {
-//         button.style.backgroundColor = "green";
-//     } else {
-//         button.style.backgroundColor = "red";
-//     }
-//3 gesonderte eventListener!!
-// });
 
+function correctAnswer(e)
+{
+    let correct = document.getElementByClassName('correctButton');
+    correct.addEventListener(click, e =>
+    {
+        correct.style.backgroundColor = "green";
+    });
+}
+correctAnswer();
 
-
-
+function wrongAnswer(e)
+{
+    let wrong = document.getElementByClassName('wrongButton');
+    correct.addEventListener(click, e =>
+    {
+        wrong.style.backgroundColor = "red";
+    });
+}
+wrongAnswer();
