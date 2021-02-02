@@ -58,6 +58,9 @@ let data = [
         question: "Which is the largest body of water?",
         choice: ["indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Nile River"],
         answer: "Pacific Ocean"
+    },
+    {
+        question: "Game Over!"
     }
 ]
 
