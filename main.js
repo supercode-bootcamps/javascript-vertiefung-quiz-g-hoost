@@ -73,7 +73,7 @@ let completeData = {
     {
         let image = document.createElement('img');
         image.src = url;
-        image.classList.add("bild")
+        image.classList.add('bild')
         content.appendChild(image);
     },
 
@@ -81,7 +81,7 @@ let completeData = {
     {
         let question = document.createElement('h1');
         question.innerHTML = questionText;
-        question.classList.add("frage");
+        question.classList.add('frage');
         content.appendChild(question);
     },
 
