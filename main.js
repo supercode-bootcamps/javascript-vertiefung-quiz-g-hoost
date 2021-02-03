@@ -155,7 +155,6 @@ let setWrongButton = (wrongButton) =>
         {
             button.style.background = 'red';
             button.innerHTML = 'false';
-            currentIndex++;
         });
     });
 }
