@@ -112,8 +112,11 @@ let completeData = {
     {
         this.createImage(apply.url);
         this.createQuestion(apply.question);
-        this.createAnswer(apply.answer);
-        this.createButton(apply.choice);
+        if (currentIndex < data.length - 1) {
+            this.createAnswer(apply.answer);
+            this.createButton(apply.choice);
+        }
+
     },
     clearQuiz: function ()
     {
@@ -136,13 +139,14 @@ let setEventListener = (e) =>
     setTimeout(() =>
     {
         completeData.clearQuiz();
-        correctButton = document.querySelector('.correctButton');
         currentIndex++;
         completeData.createQuiz(data[currentIndex]);
         correctButton = document.querySelector('.correctButton')
         wrongButton = document.querySelectorAll('.wrongButton');
-        correctButton.addEventListener('click', setEventListener);
-        setWrongButton(wrongButton);
+        if (correctButton && wrongButton.length > 0) {
+            correctButton.addEventListener('click', setEventListener);
+            setWrongButton(wrongButton);
+        };
     }, 300)
 
 };
