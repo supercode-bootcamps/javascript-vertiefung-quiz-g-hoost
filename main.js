@@ -56,11 +56,13 @@ let data = [
     {
         url: "https://cdn.playbuzz.com/cdn//f063e8fe-ad57-485e-8211-ed2ee0d9a205/1226f177-dc1a-4142-8875-bdaa177717d7.jpg",
         question: "Which is the largest body of water?",
-        choice: ["indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Nile River"],
+        choice: ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Nile River"],
         answer: "Pacific Ocean"
     },
     {
-        question: "Game Over!"
+        url: "https://info2.sermon-online.com/german/Others/Game_Over_2017.jpg",
+        question: "You are super!"
+
     }
 ]
 
@@ -130,7 +132,7 @@ let setEventListener = (e) =>
 {
     e.preventDefault();
     correctButton.style.background = 'green';
-    correctButton.innerHTML = 'richtig';
+    correctButton.innerHTML = 'correct';
     setTimeout(() =>
     {
         completeData.clearQuiz();
@@ -152,7 +154,8 @@ let setWrongButton = (wrongButton) =>
         button.addEventListener('click', (e) =>
         {
             button.style.background = 'red';
-            button.innerHTML = 'falsch';
+            button.innerHTML = 'false';
+            currentIndex++;
         });
     });
 }

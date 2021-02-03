@@ -22,14 +22,18 @@ div {
 button {
     display: grid;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background-color: honeydew;
-    border: 1px solid grey;
+    border: 10px solid darkorange;
+    box-shadow: 10px 5px darkgray;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 1rem;
+    padding: 10px;
     border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 .green {
     background-color: green;
@@ -45,6 +49,7 @@ h1 {
     background-color: honeydew;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: 10px 5px darkgray;
 }
 h2 {
     visibility: hidden;
@@ -57,6 +62,7 @@ h2 {
     /* padding-top: 3rem; */
     box-shadow: 10px 10px darkorange;
     border-radius: 10px;
+    box-shadow: 10px 5px darkgray;
 }
 p {
     width: 150px;
