@@ -9,13 +9,11 @@ body {
 }
 div {
     position: relative;
-    height: 70vh;
     width: 500px;
     border: 2px dotted darkgray;
     margin: 0 auto;
     background-image: url(assets/17973871.jpg);
     background-size: contain;
-    background-color: .5;
     border-radius: 10px;
     margin-top: 2rem;
 }
@@ -28,8 +26,7 @@ button {
     box-shadow: 10px 5px darkgray;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 1rem;
+    margin: 1rem auto 3rem auto;
     padding: 10px;
     border-radius: 5px;
     font-size: 1rem;
